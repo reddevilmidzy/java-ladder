@@ -14,11 +14,18 @@ public class Players {
         for (String name : names) {
             result.add(new Player(name));
         }
-        validate(result);
+        validateDuplicate(result);
+        validateSize(result);
         this.players = result;
     }
 
-    private void validate(List<Player> result) {
+    private void validateSize(List<Player> result) {
+        if (result.size() < 2 || result.size() > 12) {
+            throw new IllegalArgumentException(); // TODO: 예외 메시지
+        }
+    }
+
+    private void validateDuplicate(List<Player> result) {
         if (result.size() != Set.copyOf(result).size()) {
             throw new IllegalArgumentException(); // TODO: 예외 메시지
         }
