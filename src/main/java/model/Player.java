@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Objects;
+
 public class Player {
 
     private final String name;
@@ -13,5 +15,21 @@ public class Player {
         if (name.length() > 5) {
             throw new IllegalArgumentException(); // TODO: 예외메시지 출력
         }
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(name);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (!(obj instanceof Player player)) {
+            return false;
+        }
+        return Objects.equals(name, player.name);
     }
 }
