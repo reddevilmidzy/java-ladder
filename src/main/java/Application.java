@@ -1,4 +1,5 @@
 import java.util.List;
+import model.Height;
 import view.InputView;
 
 public class Application {
@@ -8,5 +9,9 @@ public class Application {
         List<String> players = inputView.readPlayers();
 
         System.out.println("players = " + players);
+
+        String value = inputView.readHeight();
+        Height height = Height.from(value);
+        System.out.println("height = " + height);
     }
 }

@@ -9,7 +9,7 @@ public class Ladder {
 
     public Ladder(Height height, Players players) {
         List<Line> result = new ArrayList<>();
-        for (int i = 0; i < height.getValue(); i++) {
+        for (int i = 0; i < height.getHeight(); i++) {
             result.add(new Line(players.getPlayersSize()));
         }
         this.ladder = result;
