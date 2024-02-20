@@ -31,6 +31,10 @@ public class Players {
         }
     }
 
+    public List<Player> getPlayers() {
+        return players;
+    }
+
     public int getPlayersSize() {
         return players.size();
     }

@@ -17,6 +17,14 @@ public class Player {
         }
     }
 
+    public int length() {
+        return name.length();
+    }
+
+    public String getName() {
+        return name;
+    }
+
     @Override
     public int hashCode() {
         return Objects.hashCode(name);

@@ -22,11 +22,17 @@
 
 ## 출력 
 
-- [ ] 참여할 사람을 출력한다.
+- [x] 참여할 사람을 출력한다.
   - 입력한 순서대로 출력
+
+  - pre + " ".repeat(5-name.length)
+  - " ".repeat(6-name.length)
+  - " ".repeat(5-name.length) + suf
+
 - [x] 사다리를 출력한다.
   - **가로**
     - true 면 `-----` 출력
     - false 면 `     ` 출력
   - **세로**
     - | 출력 
+

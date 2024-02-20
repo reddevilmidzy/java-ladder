@@ -2,6 +2,7 @@ import model.Height;
 import model.Ladder;
 import model.Players;
 import view.InputView;
+import view.OutputView;
 import view.ResultView;
 
 public class Application {
@@ -12,9 +13,11 @@ public class Application {
 
         String value = inputView.readHeight();
         Height height = Height.from(value);
-        System.out.println("height = " + height);
 
         Ladder ladder = new Ladder(height, players);
+
+        OutputView outputView = new OutputView();
+        outputView.printPlayers(players);
 
         ResultView resultView = new ResultView(ladder);
         resultView.printResult();
