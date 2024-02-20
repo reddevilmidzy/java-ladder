@@ -20,6 +20,14 @@ public class Line {
         return i % 2 == 0;
     }
 
+    public boolean hasBride(int index) {
+        return points.get(index);
+    }
+
+    public int size() {
+        return points.size();
+    }
+
     public List<Boolean> getPoints() {
         return points;
     }

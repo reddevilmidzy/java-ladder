@@ -14,4 +14,12 @@ public class Ladder {
         }
         this.ladder = result;
     }
+
+    public Line get(int index) {
+        return ladder.get(index);
+    }
+
+    public int size() {
+        return ladder.size();
+    }
 }
