@@ -19,7 +19,7 @@ public class Application {
         OutputView outputView = new OutputView();
         outputView.printPlayers(players);
 
-        ResultView resultView = new ResultView(ladder);
+        ResultView resultView = new ResultView(ladder, players.getPlayers().get(0).length());
         resultView.printResult();
     }
 }

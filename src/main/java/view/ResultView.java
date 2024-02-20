@@ -9,19 +9,20 @@ public class ResultView {
 
     private final List<String> result;
 
-    public ResultView(Ladder ladder) {
+    public ResultView(Ladder ladder, int pre) {
         List<String> result = new ArrayList<>();
 
         for (int i = 0; i < ladder.size(); i++) {
             Line line = ladder.get(i);
-            result.add(convert(line));
+            result.add(convert(line, pre));
         }
         this.result = result;
     }
 
-    private String convert(Line line) {
+    private String convert(Line line, int pre) {
         StringBuilder stringBuilder = new StringBuilder();
-        for (int i = 0; i < line.size(); i++) {
+        stringBuilder.append(" ".repeat(pre));
+        for (int i = 0; i < line.size() - 1; i++) {
             if (line.hasBride(i)) {
                 stringBuilder.append("|-----");
             } else if (!line.hasBride(i)) {
