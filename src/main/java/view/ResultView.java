@@ -2,6 +2,7 @@ package view;
 
 import java.util.ArrayList;
 import java.util.List;
+import model.Bridge;
 import model.Ladder;
 import model.Line;
 
@@ -23,13 +24,14 @@ public class ResultView {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append(" ".repeat(pre));
         for (int i = 0; i < line.size() - 1; i++) {
+            stringBuilder.append(Bridge.COLUMN.getValue());
             if (line.hasBride(i)) {
-                stringBuilder.append("|-----");
+                stringBuilder.append(Bridge.FILL.getValue());
             } else if (!line.hasBride(i)) {
-                stringBuilder.append("|     ");
+                stringBuilder.append(Bridge.EMPTY.getValue());
             }
         }
-        stringBuilder.append("|");
+        stringBuilder.append(Bridge.COLUMN.getValue());
         return stringBuilder.toString();
     }
 
