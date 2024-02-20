@@ -14,4 +14,8 @@ public class Height {
             throw new IllegalArgumentException(); // TODO: 예외 메시지
         }
     }
+
+    public int getValue() {
+        return value;
+    }
 }
