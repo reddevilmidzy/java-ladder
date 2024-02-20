@@ -11,7 +11,8 @@ public class OutputView {
         int n = result.size();
         StringBuilder stringBuilder = new StringBuilder();
 
-        stringBuilder.append(result.get(0).getName()).append(" ".repeat(5 - result.get(0).length()));
+        stringBuilder.append(result.get(0).getName()).append(" ");
+//                .append(" ".repeat(5 - result.get(0).length())); // TODO: 뭐가 맞는지 확인하기
 
         for (Player player : result.subList(1, n - 1)) {
             stringBuilder.append(padding(player));
